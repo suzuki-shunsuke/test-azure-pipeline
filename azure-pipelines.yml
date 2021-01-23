@@ -10,10 +10,9 @@ pool:
   vmImage: 'windows-latest'
 
 steps:
-- script: go version
-  displayName: 'Run a one-line script'
-
 - script: |
-    echo Add other tasks to build, test, and deploy your project.
-    echo See https://aka.ms/yaml
-  displayName: 'Run a multi-line script'
+    set -x
+    go version
+    echo "$GOROOT_1_15_X64"
+    which go
+  displayName: 'Run a one-line script'
