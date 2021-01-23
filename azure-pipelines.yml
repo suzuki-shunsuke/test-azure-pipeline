@@ -22,5 +22,7 @@ steps:
       go version
       echo "GOROOT_1_15_X64: $GOROOT_1_15_X64"
       export "PATH=/c/hostedtoolcache/windows/go/1.15.6/x64/bin:$PATH"
+      echo "GOROOT: $GOROOT"
+      export "GOROOT=$GOROOT_1_15_X64"
       which go
       go version
