@@ -11,8 +11,14 @@ pool:
 
 steps:
 - script: |
-    set -x
-    go version
-    echo "%GOROOT_1_15_X64%"
-    which go
   displayName: 'Run a one-line script'
+- task: Bash@3
+  inputs:
+    targetType: 'inline'
+    script: |
+      set -x
+      go version
+      echo "GOROOT_1_15_X64: $GOROOT_1_15_X64"
+      export "PATH=$GOROOT_1_15_X64/bin:$PATH"
+      which go
+      go version
