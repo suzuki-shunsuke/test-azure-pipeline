@@ -13,6 +13,6 @@ steps:
 - script: |
     set -x
     go version
-    echo "$GOROOT_1_15_X64"
+    echo "%GOROOT_1_15_X64%"
     which go
   displayName: 'Run a one-line script'
