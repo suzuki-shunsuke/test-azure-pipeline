@@ -17,8 +17,10 @@ steps:
     targetType: 'inline'
     script: |
       set -x
+      /c/hostedtoolcache/windows/go/1.14.13/x64/bin/go version
+      /c/hostedtoolcache/windows/go/1.15.6/x64/bin/go version
       go version
       echo "GOROOT_1_15_X64: $GOROOT_1_15_X64"
-      export "PATH=$GOROOT_1_15_X64/bin:$PATH"
+      export "PATH=/c/hostedtoolcache/windows/go/1.15.6/x64/bin:$PATH"
       which go
       go version
